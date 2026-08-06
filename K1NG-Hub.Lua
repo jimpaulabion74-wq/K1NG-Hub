@@ -1,4 +1,4 @@
--- Fetch and initialize the Orion UI framework
+-- Fetch and initialize a working Orion UI framework
 local OrionLib = loadstring(game:HttpGet(('https://githubusercontent.com')))()
 
 -- Send a custom notification upon successful injection
