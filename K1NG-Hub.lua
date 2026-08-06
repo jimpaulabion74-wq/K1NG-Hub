@@ -29,7 +29,7 @@ local MainTab = Window:MakeTab({
 MainTab:AddButton({
     Name = "Execute SimpleSpy (Remote Spy)",
     Callback = function()
-        loadstring(game:HttpGet("https://github.com"))()
+        loadstring(game:HttpGet("https://githubusercontent.com"))()
     end    
 })
 
@@ -49,7 +49,6 @@ local PlayerTab = Window:MakeTab({
     PremiumOnly = false
 })
 
--- Dynamic slider to scale player movement speed safely
 PlayerTab:AddSlider({
     Name = "Movement Speed (WalkSpeed)",
     Min = 16,
@@ -66,7 +65,6 @@ PlayerTab:AddSlider({
     end    
 })
 
--- Toggle loop configuration for continuous jumping
 local InfJumpState = false
 PlayerTab:AddToggle({
     Name = "Enable Infinite Jump",
@@ -76,7 +74,6 @@ PlayerTab:AddToggle({
     end
 })
 
--- Network event listener linking the physics state to the toggle
 game:GetService("UserInputService").JumpRequest:Connect(function()
     if InfJumpState then
         local character = game.Players.LocalPlayer.Character
@@ -86,17 +83,4 @@ game:GetService("UserInputService").JumpRequest:Connect(function()
     end
 end)
 
--- =================================================================
--- TAB 3: CREDITS & INFO
--- =================================================================
-local CreditsTab = Window:MakeTab({
-    Name = "Credits",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-})
-
-CreditsTab:AddParagraph("Owner & Developer", "This entire script hub was created and compiled by K1NG.")
-CreditsTab:AddParagraph("Version Status", "Version 1.0.0 - Fully Functional.")
-
--- Initialize and display the completed interface layout
 OrionLib:Init()
